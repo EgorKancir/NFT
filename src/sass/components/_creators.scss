@@ -1,0 +1,207 @@
+.creators {
+    padding: 80px 0;
+    margin: 0;
+    &__content {
+        @extend %position-center;
+        flex-direction: column;
+        gap: 60px;
+    }
+    &__main-info {
+        @include flex(center, end);
+        gap: 100px;
+    }
+    &__text-group {
+        width: 703px;
+        @include flex(center, start);
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__button {
+        @extend %position-center;
+        height: 60px;
+        padding: 0px 50px;
+        gap: 12px;
+        border-radius: 20px;
+        border: 2px solid #A259FF;
+        color: #FFF;
+        text-align: center;
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; 
+        fill: #A259FF;
+        &:hover {
+            background-color: #A259FF;
+            color: black;
+            fill: #FFF;
+            transform: scale(0.95);
+            transition: all 0.3s ease-in-out;
+        } 
+    }
+    &__mobile-button {
+        display: none;
+    }
+    &__card-group {
+        @extend %position-center;
+        gap: 30px;
+    }
+}
+.creators-card {
+    @extend %position-center;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    background: #3B3B3B;
+    position: relative;
+    &:hover {
+        opacity: 0.8;
+        transform: scale(0.95);
+        transition: all 0.3s ease-in-out;
+    }
+    &__namber-box {
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        border-radius: 20px;
+        background: #2B2B2B;
+        @extend %position-center;
+        width: 30px;
+        height: 30px;
+    }
+    &__namber {
+        color: #858584;
+        text-align: center;
+        font-family: "Space Mono";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+    }
+    &__avatar {
+        width: 120px;
+        height: 120px;
+    }
+    &__info-box {
+        @extend %position-center;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__name {
+        color: #FFF;
+        text-align: center;
+        font-family: "Work Sans";
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; 
+        text-transform: capitalize;
+    }
+    &__statistics {
+        width: 200px;
+        color: #858584;
+        text-align: right;
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        @extend %position-center;
+        gap: 10px;
+    }
+    &__statistics-namber {
+        color: #FFF;
+        font-family: "Space Mono";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; 
+    }
+}
+// Tablet
+@media (max-width: 1024px) {
+    .creators {
+        padding: 40px 0;
+        &__content {
+            gap: 40px;
+        }
+        &__text-group {
+            width: 343px;
+        }
+    }
+    .creators-card { 
+        flex-direction: row;
+        &:nth-child(7), 
+        &:nth-child(8),
+        &:nth-child(9),
+        &:nth-child(10),
+        &:nth-child(11),
+        &:nth-child(12) {
+            display: none;
+        }
+        &__namber-box {
+            top: 13px;
+            left: 12px;
+        }
+        &__avatar {
+            width: 60px;
+            height: 60px;
+        }
+        &__info-box {
+            @include flex(center, start);
+        }
+        &__statistics {
+            @include flex(start, center);
+            width: 210px;
+            gap: 20px;
+        }
+    }
+}
+ // Mobile 
+@media (max-width: 768px) {
+    .creators {
+        &__text-group {
+            width: 100%;
+        }
+        &__button {
+            display: none;
+        }
+        &__mobile-button {
+            @include flex(center, center);
+            width: 100%;
+            height: 60px;
+            padding: 0px 50px;
+            gap: 12px;
+            border-radius: 20px;
+            border: 2px solid #A259FF;
+            color: #FFF;
+            text-align: center;
+            font-family: "Work Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%; 
+            fill: #A259FF;
+            &:hover {
+                background-color: #A259FF;
+                color: black;
+                fill: #FFF;
+                transform: scale(0.95);
+                transition: all 0.3s ease-in-out;
+            } 
+        }
+        &__card-group {
+            gap: 20px;
+        }
+    }
+    .creators-card { 
+        &:nth-child(6) {
+            display: none;
+        }
+        &__statistics {
+            width: 195px;
+            gap: 10px;
+        }
+    }
+}

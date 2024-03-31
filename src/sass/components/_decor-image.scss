@@ -1,0 +1,164 @@
+.decor-image {
+    width: 100%;
+    margin: 0;
+    height: 660px;
+    background-image: url("../src/image/raster/section6_decor/nft.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__content {
+        display: none;
+    }
+}
+// Tablet
+@media (max-width: 1024px) {
+    .decor-image {
+        height: 630px;
+        padding: 360px 0 60px 0;
+        &__content {
+            display: flex;
+            padding: 0 10px;
+        }
+        &__main-group {
+            gap: 30px;
+        }
+        &__title {
+            width: 375px;
+            color: #FFF;
+            font-family: "Work Sans";
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+            text-transform: capitalize;
+        }
+        &__button {
+            height: 60px;
+            padding: 22px 50px;
+            gap: 12px;
+            border-radius: 20px;
+            background:#FFF;
+            color: #2B2B2B;
+            text-align: center;
+            font-family: "Work Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
+            fill: #A259FF;
+            &:hover {
+                background-color: #A259FF;
+                color: black;
+                fill: #FFF;
+                transform: scale(0.95);
+                transition: all 0.3s ease-in-out;
+            } 
+        }
+    }
+    .artist {
+        padding: 10px 20px;
+        gap: 12px;
+        border-radius: 20px;
+        background: #3B3B3B;
+    }
+    .artist__image {
+        width: 24px;
+        height: 24px;
+    }
+    .artist__name {
+        color: #FFF;
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; 
+    }
+    .timer {
+        width: 295px;
+        height: 147px;
+        padding: 30px;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        background: rgba(59, 59, 59, 0.50);
+        backdrop-filter: blur(5px);
+        &__title {
+            color: #FFF;
+            font-family: "Space Mono";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%;
+        }
+        &__box {
+            gap: 10px;
+        }
+        &__number-group {
+            gap: 5px;
+        }
+        &__number {
+            color: #FFF;
+            font-family: "Space Mono";
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+            text-transform: capitalize;
+        }
+        &__number-title {
+            color: #FFF;
+            font-family: "Space Mono";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%; 
+        } 
+        &__colon {
+            color: #FFF;
+            font-family: "Space Mono";
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%; 
+            text-transform: capitalize;
+            animation: party 2s ease-in-out infinite;
+        }
+    }
+
+}
+@keyframes party {
+    0% {transform: scale(1);
+        transition: all 0.5s linear;
+    }
+    25% {transform: scale(0.5);
+        transition: all 0.5s linear;
+    }
+    50% {transform: scale(1);
+        transition: all 0.5s linear;
+    }
+    75% {transform: scale(0.5);
+        transition: all 0.5s linear;
+    }
+}
+// Mobile 
+@media (max-width: 768px) {
+    .decor-image {
+        height: 593px;
+        padding: 120px 0 40px 0;
+        &__content {
+            gap: 30px;
+        }
+        &__title {
+            width: 100%;
+        }
+        &__button {
+            width: 100%;
+        }
+    }
+    .timer {
+        width: 100%;
+        &__number-group {
+            width: 60px;
+        }
+    }
+}

@@ -1,0 +1,142 @@
+.join {
+    padding: 40px 0 80px 0;
+    margin: 0;
+    &__main-card {
+        padding: 60px;
+        gap: 80px;
+        border-radius: 20px;
+        background: #3B3B3B;
+    }
+    &__image {
+        border-radius: 20px;
+        width: 425px;
+        height: 310px;
+        background-image: url("../src/image/raster/section8_join/photo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &__info-group {
+        gap: 40px;
+    }
+    &__text-group {
+        width: 425px;
+        gap: 10px;
+    }
+}
+.join-form {
+    position: relative;    
+    &__input-box {
+        width: 425px;
+        @include flex(start, center);
+        padding: 16px 0px 16px 20px;
+        gap: 12px;
+        border-radius: 20px;
+        background: #FFF;
+    }
+    &__input {
+        width: 182px;
+        height: 28px;
+        border: none;
+        background-color: inherit;
+        color: #2B2B2B;
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        &:focus-visible {
+            outline: none;
+        }
+    }
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 60px;
+        padding: 0px 50px;
+        gap: 12px;
+        color: #FFF;
+        fill: #FFF;
+        text-align: center;
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; 
+        border-radius: 20px;
+        background: #A259FF;
+        border: 1px solid #A259FF;
+        &:hover {
+            color: black;
+            fill: black;
+            opacity: 0.9;
+            transform: scale(0.9);
+            transition: all 0.2s ease-in-out;
+        }
+    }
+}
+// Tablet
+@media (max-width: 1024px) {
+    .join {
+        &__main-card {
+            padding: 40px 30px;
+            gap: 30px;
+        }
+        &__image {
+            width: 300px;
+            height: 280px;
+        }
+        &__text-group {
+            width: 300px;
+        }
+    }
+    .join-form {
+        gap: 16px;
+        position: relative;    
+        &__input-box {
+            width: 300px;
+            padding: 12px 20px;
+        }
+        &__input {
+            width: 100%;
+            height: 14px;
+        }
+        &__button {
+            width: 300px;
+            position: static;
+            height: 46px;
+        }
+    }
+}
+// Mobile 
+@media (max-width: 768px) {
+    .join {
+        padding: 40px 0;
+        &__main-card {
+            padding: 0;
+            background: none;
+            flex-direction: column;
+        }
+        &__image {
+            width: 315px;
+            height: 255px;
+        }
+        &__text-group {
+            width: 100%;
+        }
+    }
+    .join-form {
+        width: 100%;
+        &__input-box {
+            width: 100%;
+            padding: 16px 20px;
+        }
+        &__input {
+            width: 100%;
+        }
+        &__button {
+            width: 100%;
+        }
+    }
+}

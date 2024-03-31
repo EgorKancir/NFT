@@ -1,0 +1,96 @@
+.instruction {
+    padding: 40px 0 80px 0;
+    margin: 0;
+    &__content {
+        gap: 48px;
+    }
+    &__text-group {
+        width: 100%;
+        gap: 10px;
+    }
+    &__card-group {
+        gap: 30px;
+    }
+}
+.instruction-card {
+    @include flex(start, center);
+    flex-direction: column;
+    padding: 10px 30px 30px 30px;
+    gap: 20px;
+    border-radius: 20px;
+    background: #3B3B3B;
+    &__image {
+        width: 250px;
+        height: 250px;
+    }
+    &__text-box {
+        @include flex(start, center);
+        flex-direction: column;
+        width: 270px;
+        gap: 10px;
+    }
+    &__title {
+        color: #FFF;
+        text-align: center;
+        font-family: "Work Sans";
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; 
+        text-transform: capitalize;
+    }
+    &__paragraf {
+        color: #FFF;
+        text-align: center;
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; 
+    }
+}
+// Tablet
+@media (max-width: 1024px) {
+    .instruction {
+        padding: 40px 0;
+        &__content {
+            gap: 40px;
+        }
+    }
+    .instruction-card {
+        padding: 10px 20px 30px 20px;
+        &__image {
+            width: 160px;
+            height: 160px;
+        }
+        &__text-box {
+            width: 170px;
+        }
+        &__title {
+            font-size: 16px;
+        }
+        &__paragraf {     
+            font-size: 12px;
+        }
+    }
+}
+// Mobile 
+@media (max-width: 768px) {
+    .instruction {
+        &__card-group {
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+    }
+    .instruction-card {
+        flex-direction: row;
+        padding: 20px;
+        &__image {
+            width: 100px;
+            height: 100px;
+        }
+        &__text-box {
+            width: 155px;
+        }
+    }
+}

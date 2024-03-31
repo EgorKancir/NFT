@@ -1,0 +1,194 @@
+.nfts {
+    padding: 80px 0;
+    margin: 0;
+    &__content {
+        @extend %position-center;
+        flex-direction: column;
+        gap: 60px;
+    }
+    &__main-info {
+        width: 100%;
+        @include flex(space-between, end);
+    }
+    &__text-group {
+        width: 763px;
+        @include flex(center, start);
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__button {
+        @extend %position-center;
+        height: 60px;
+        padding: 0px 50px;
+        gap: 12px;
+        border-radius: 20px;
+        border: 2px solid #A259FF;
+        color: #FFF;
+        text-align: center;
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; 
+        fill: #A259FF;
+        &:hover {
+            background-color: #A259FF;
+            color: black;
+            fill: #FFF;
+            transform: scale(0.95);
+            transition: all 0.3s ease-in-out;
+        } 
+    }
+    &__card-group {
+        @extend %position-center;
+        gap: 30px;
+    }
+}
+.nfts-card {
+    @extend %position-center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #3B3B3B;
+    &:hover {
+        opacity: 0.8;
+        transform: scale(0.95);
+        transition: all 0.3s ease-in-out;
+    }
+    &:nth-child(1) &__image {
+        background-image: url("../src/image/raster/section5_nfts/image1.png");
+    }
+    &:nth-child(2) &__image {
+        background-image: url("../src/image/raster/section5_nfts/image2.png");
+    }
+    &:nth-child(3) &__image {
+        background-image: url("../src/image/raster/section5_nfts/image3.png");
+    }
+    &__image {
+        width: 100%;
+        height: 296px;
+        border-radius: 20px 20px 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &__info {
+        display: flex;
+        padding: 20px 30px 25px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        align-self: stretch;
+    }
+    &__main-info-box {
+        @include flex(center, start);
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__title {
+        width: 270px;
+        color: #FFF;
+        font-family: "Work Sans";
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%; 
+        text-transform: capitalize;
+    }
+    &__artist-info-box {
+        @include flex(start, center);
+        gap: 12px;
+    }
+    &__artist-image {
+        width: 24px;
+        height: 24px;
+    }
+    &__artist-name {
+        color: #FFF;
+        font-family: "Space Mono";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+    }
+    &__statistics {
+        @include flex(space-between, center);
+    }
+    &__price-box {
+        width: 135px;
+        @include flex(center, start);
+        flex-direction: column;
+        gap: 8px;
+    }
+    &__statistics-title {
+        color: #858584;
+        font-family: "Space Mono";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; 
+    }
+    &__statistics-namber {
+        color: #FFF;
+        font-family: "Space Mono";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; 
+    }
+    &__highest-bid-box {
+        width: 135px;
+        @include flex(center, end);
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+// Tablet
+@media (max-width: 1024px) {
+    .nfts {
+        padding: 40px 0;
+        &__content {
+            gap: 40px;
+        }
+        &__text-group {
+            width: 403px;
+        }
+    }
+    .nfts-card {
+        &:nth-child(3) {
+            display: none;
+        }
+    }
+}
+// Mobile 
+@media (max-width: 768px) {
+    .nfts {
+        &__text-group {
+            width: 100%;
+        }
+        &__button {
+            width: 100%;
+        }
+        &__card-group {
+            gap: 20px;
+        }
+    }
+    .nfts-card {
+        &:nth-child(3) {
+            display: flex;
+        }
+
+        &__image {
+            height: 238px;
+        }
+        &__info {
+            padding: 20px 20px 25px 20px;
+        }
+        &__title {
+            width: 100%;
+        }    
+        &__statistics-namber {
+            font-size: 12px;
+            line-height: 110%; 
+        }
+    }
+}
